@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Ab aap @apply ko seedha use kar sakte hain */
+body {
+  @apply bg-white text-black;
+}

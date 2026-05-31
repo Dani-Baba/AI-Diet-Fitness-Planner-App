@@ -1,0 +1,10 @@
+# Secret files
+.env
+.env.local
+
+# Node modules
+node_modules/
+
+# Build folder
+dist/
+build/
