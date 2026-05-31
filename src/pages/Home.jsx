@@ -20,7 +20,7 @@ const Home = () => {
             maintain a healthier lifestyle.
           </p>
 
-          {/* Buttons: Custom Color & Hover Effects (Same Sizing and Text) */}
+          {/* Buttons: Custom Color & Hover Effects (Signup button removed) */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link 
               to="/signup" 
@@ -34,13 +34,6 @@ const Home = () => {
               className="w-full sm:w-auto bg-gray-900 text-white px-10 py-4 rounded-xl text-lg font-semibold hover:bg-black transition-all shadow-[0_10px_20px_-5px_rgba(17,24,39,0.3)] hover:shadow-[0_15px_25px_-5px_rgba(0,0,0,0.4)] hover:-translate-y-0.5 active:translate-y-0 text-center"
             >
               Login
-            </Link>
-
-            <Link 
-              to="/signup" 
-              className="w-full sm:w-auto border-2 border-gray-900 text-gray-900 px-10 py-4 rounded-xl text-lg font-semibold hover:bg-emerald-50 hover:border-emerald-600 hover:text-emerald-600 transition-all hover:-translate-y-0.5 active:translate-y-0 text-center"
-            >
-              Signup
             </Link>
           </div>
         </div>

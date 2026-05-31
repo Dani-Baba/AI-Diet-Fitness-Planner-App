@@ -52,7 +52,7 @@ const Footer = () => {
             <h3 className="text-base font-black tracking-wider uppercase text-gray-400 mb-5 border-b border-gray-800 pb-2 inline-block sm:block">Support</h3>
             <ul className="space-y-3">
               <li><Link to="/help" className="text-gray-400 hover:text-emerald-400 transition-colors text-base font-bold">Help Center</Link></li>
-              <li><Link to="/privacy" className="text-gray-400 hover:text-emerald-400 transition-colors text-base font-bold">Privacy Policy</Link></li>
+              {/* <li><Link to="/privacy" className="text-gray-400 hover:text-emerald-400 transition-colors text-base font-bold">Privacy Policy</Link></li> */}
               <li><Link to="/terms" className="text-gray-400 hover:text-emerald-400 transition-colors text-base font-bold">Terms of Service</Link></li>
               <li><Link to="/faq" className="text-gray-400 hover:text-emerald-400 transition-colors text-base font-bold">FAQ</Link></li>
             </ul>
@@ -65,9 +65,9 @@ const Footer = () => {
             © 2026 Nutrismart. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
-            <Link to="/privacy" className="text-gray-500 hover:text-emerald-400 transition-colors font-bold">Privacy</Link>
-            <Link to="/terms" className="text-gray-500 hover:text-emerald-400 transition-colors font-bold">Terms</Link>
-            <Link to="/faq" className="text-gray-500 hover:text-emerald-400 transition-colors font-bold">Cookies</Link>
+            {/* <Link to="/privacy" className="text-gray-500 hover:text-emerald-400 transition-colors font-bold">Privacy</Link> */}
+            {/* <Link to="/terms" className="text-gray-500 hover:text-emerald-400 transition-colors font-bold">Terms</Link>
+            <Link to="/faq" className="text-gray-500 hover:text-emerald-400 transition-colors font-bold">Cookies</Link> */}
           </div>
         </div>
       </div>
