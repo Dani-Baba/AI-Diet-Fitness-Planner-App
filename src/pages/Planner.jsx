@@ -18,8 +18,10 @@ const Planner = () => {
     height: "",
     gender: "male",
   });
-  // Updated workoutPref state to include 'level' and 'dietType'
+  
+  // Updated workoutPref state to include 'goal', 'level' and 'dietType'
   const [workoutPref, setWorkoutPref] = useState({
+    goal: "Weight Loss", // Default selection for Fitness Goal
     bodyPart: "Full Body",
     level: "beginner",
     daysPerWeek: "3",
@@ -158,6 +160,31 @@ const Planner = () => {
         <div className="space-y-4">
           <h2 className="text-2xl font-black">Workout Preferences</h2>
 
+          {/* Fitness Goal Selection Section */}
+          <label className="font-bold block pt-2">Fitness Goal:</label>
+          <div className="flex flex-wrap gap-2">
+            {[
+              { id: "Weight Loss", label: "Weight Loss" },
+              { id: "Weight Gain", label: "Weight Gain" },
+              { id: "Lean Muscle", label: "Lean Muscle Build" },
+              { id: "Maintain Fitness", label: "Maintain Fitness" }
+            ].map((g) => (
+              <button
+                key={g.id}
+                type="button"
+                onClick={() => setWorkoutPref({ ...workoutPref, goal: g.id })}
+                className={`flex-1 min-w-[140px] py-2 px-3 rounded-xl capitalize font-medium text-sm transition-all ${
+                  workoutPref.goal === g.id
+                    ? "bg-green-500 text-white font-bold"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
+              >
+                {g.label}
+              </button>
+            ))}
+          </div>
+
+          <label className="font-bold block pt-2">Target Body Part:</label>
           <select
             className="w-full p-4 bg-gray-50 rounded-2xl"
             value={workoutPref.bodyPart}
@@ -175,6 +202,7 @@ const Planner = () => {
           </select>
 
           {/* Level Selection */}
+          <label className="font-bold block pt-2">Fitness Level:</label>
           <div className="flex gap-2">
             {["beginner", "intermediate", "advanced"].map((lvl) => (
               <button
